@@ -3,7 +3,7 @@ import _ from 'lodash';
 import AggConfigResult from '../data_load/agg_config_result';
 import tableCellFilterHtml from './table_cell_filter.html';
 
-export function KbnEnhancedRows($compile) {
+export function OsdEnhancedRows($compile) {
   return {
     restrict: 'A',
     link: function ($scope, $el, attr) {
@@ -14,7 +14,7 @@ export function KbnEnhancedRows($compile) {
 
         function createFilterableCell(aggConfigResult) {
           const $template = $(tableCellFilterHtml);
-          $template.addClass('kbnTableCellFilter__hover');
+          $template.addClass('osdTableCellFilter__hover');
 
           const scope = $scope.$new();
 
@@ -108,8 +108,8 @@ export function KbnEnhancedRows($compile) {
       }
 
       $scope.$watchMulti([
-        attr.kbnEnhancedRows,
-        attr.kbnEnhancedRowsMin
+        attr.osdEnhancedRows,
+        attr.osdEnhancedRowsMin
       ], function (vals) {
         let rows = vals[0];
         const min = vals[1];

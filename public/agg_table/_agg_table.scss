@@ -1,15 +1,15 @@
-kbn-enhanced-agg-table,
-kbn-enhanced-agg-table-group {
+osd-enhanced-agg-table,
+osd-enhanced-agg-table-group {
   display: block;
 }
 
-.kbnAggTable {
+.osdAggTable {
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
 }
 
-.kbnAggTable__paginated {
+.osdAggTable__paginated {
   flex: 1 1 auto;
   overflow: auto;
 
@@ -19,7 +19,7 @@ kbn-enhanced-agg-table-group {
   }
 
   tr:hover td,
-  .kbnTableCellFilter {
+  .osdTableCellFilter {
     background-color: $euiColorLightestShade;
   }
 
@@ -38,7 +38,7 @@ kbn-enhanced-agg-table-group {
 
 }
 
-.kbnAggTable__controls {
+.osdAggTable__controls {
   flex: 0 0 auto;
   display: flex;
   align-items: center;
@@ -52,7 +52,7 @@ kbn-enhanced-agg-table-group {
 }
 
 
-.striped-rows .kbnAggTable__paginated {
+.striped-rows .osdAggTable__paginated {
   tr:nth-child(odd) td {
     background-color: lighten($euiColorLightestShade, 2%);
   }

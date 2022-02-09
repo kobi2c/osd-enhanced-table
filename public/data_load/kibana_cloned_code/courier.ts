@@ -1,4 +1,4 @@
-import { i18n } from '@kbn/i18n';
+import { i18n } from '@osd/i18n';
 
 import { Adapters } from '../../../../../src/plugins/inspector/common';
 

@@ -8,7 +8,7 @@
   },
   "scripts": {
     "preinstall": "node ../../preinstall_check",
-    "kbn": "node ../../scripts/kbn",
+    "osd": "node ../../scripts/osd",
     "es": "node ../../scripts/es",
     "lint": "../../node_modules/.bin/eslint .",
     "start": "cd ../.. && node scripts/kibana --dev --oss",

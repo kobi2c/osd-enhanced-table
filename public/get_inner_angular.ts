@@ -5,14 +5,14 @@ import angular from 'angular';
 // required for `ngSanitize` angular module
 import 'angular-sanitize';
 import 'angular-recursion';
-import { i18nDirective, i18nFilter, I18nProvider } from '@kbn/i18n/angular';
+import { i18nDirective, i18nFilter, I18nProvider } from '@osd/i18n/angular';
 import { CoreStart, IUiSettingsClient, PluginInitializerContext } from 'kibana/public';
 import {
   PaginateDirectiveProvider,
   PaginateControlsDirectiveProvider,
   PrivateProvider,
   watchMultiDecorator,
-  KbnAccessibleClickProvider,
+  OsdAccessibleClickProvider,
 } from '../../../src/plugins/kibana_legacy/public';
 
 const thirdPartyAngularDependencies = ['ngSanitize', 'ui.bootstrap', 'RecursionHelper'];
@@ -41,7 +41,7 @@ export function getInnerAngular(name = 'kibana/enhanced_table_vis', core: CoreSt
       'tableVisI18n',
     ])
     .config(watchMultiDecorator)
-    .directive('kbnAccessibleClick', KbnAccessibleClickProvider);
+    .directive('osdAccessibleClick', OsdAccessibleClickProvider);
 }
 
 function createLocalPrivateModule() {

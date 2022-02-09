@@ -10,7 +10,7 @@ import { handleCourierRequest } from '../data_load/kibana_cloned_code/courier';
 import { createTable } from '../data_load/document-table-response-handler';
 import { streamSaver } from './stream_saver';
 
-export function KbnEnhancedAggTable(config, RecursionHelper) {
+export function OsdEnhancedAggTable(config, RecursionHelper) {
   const fieldFormats = getFormatService();
   const numberFormatter = fieldFormats.getDefaultInstance('number').getConverterFor('text');
 

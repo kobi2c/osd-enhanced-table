@@ -1,5 +1,5 @@
 import { get } from 'lodash';
-import { i18n } from '@kbn/i18n';
+import { i18n } from '@osd/i18n';
 import { ExpressionFunctionDefinition, Render } from '../../../../src/plugins/expressions/public';
 import { getIndexPatterns, getFilterManager, getSearchService, getVisualization } from '../services';
 import { enhancedTableRequestHandler } from './enhanced-table-request-handler';
