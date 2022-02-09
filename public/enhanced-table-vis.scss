@@ -1,0 +1,66 @@
+.enhanced-table-vis {
+
+  .agg-table-group > tbody > tr > td {
+    padding: 0px 5px;
+  }
+
+  kbn-enhanced-agg-table-group > .table > tbody > tr > td {
+    border-top: 0px;
+  }
+
+  paginate-controls {
+    padding: 0px 5px;
+  }
+
+  .pagination-other-pages {
+    justify-content: flex-end;
+  }
+
+  .pagination-size {
+    display: none;
+  }
+
+  kbn-enhanced-agg-table-group .table {
+    margin-bottom: 0px;
+  }
+
+  .hide-export-links .pagination-container {
+    display: none;
+  }
+
+  .hide-pagination paginate-controls {
+    display: none;
+  }
+
+  .filterInput {
+    border-color: #D9D9D9;
+    border-width: 1px;
+    box-shadow: none;
+  }
+
+  .filterInput:focus {
+    border-color: #0079a5;
+  }
+
+  .filterButton {
+    height: 33px;
+  }
+
+  .filterButton:disabled {
+    cursor: default;
+    opacity: 1;
+  }
+
+  .filterTextContainer {
+    text-align: right;
+  }
+
+  .filterText {
+    padding-right: 20px;
+  }
+
+  .filterBar {
+    margin-top: 16px;
+  }
+
+}

@@ -1,0 +1,32 @@
+env:
+  browser: true
+  es6: true
+extends: 'eslint:recommended'
+parserOptions:
+  ecmaVersion: 2018
+  sourceType: module
+rules:
+  "@kbn/eslint/require-license-header": off
+  "prettier/prettier": off
+  "import/no-extraneous-dependencies": off
+  "template-curly-spacing" : 0
+  indent:
+    - off
+    - 2
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - single
+  semi:
+    - error
+    - always
+  no-trailing-spaces:
+    - 2
+    - skipBlankLines: false
+  no-console: error
+overrides:
+  - files: ['index.js']
+    env:
+      node: true

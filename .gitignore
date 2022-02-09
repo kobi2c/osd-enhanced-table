@@ -1,0 +1,10 @@
+node_modules/
+build/
+target/
+local
+npm-debug.log*
+package-lock.json
+yarn.lock
+.project
+*.zip
+.vscode

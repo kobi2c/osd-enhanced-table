@@ -1,0 +1,18 @@
+{
+  "id": "enhancedTable",
+  "version": "kibana",
+  "server": false,
+  "ui": true,
+  "requiredPlugins": [
+    "visualizations",
+    "expressions",
+    "data",
+    "inspector",
+    "kibanaLegacy",
+    "kibanaUtils",
+    "kibanaReact",
+    "share",
+    "charts",
+    "visDefaultEditor"
+  ]
+}
