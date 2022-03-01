@@ -4,7 +4,7 @@ import { i18n } from '@osd/i18n';
 import { FormattedMessage } from '@osd/i18n/react';
 import { EuiDraggable, EuiIconTip, EuiSpacer, EuiAccordion, EuiToolTip, EuiButtonIcon, EuiButtonIconProps } from '@elastic/eui';
 
-import { NumberInputOption, SelectOption } from '../../../../src/plugins/vis_default_editor/public';
+import { NumberInputOption, SelectOption } from '../../../../src/plugins/charts/public';
 import { SwitchOption } from './switch';
 import { TextInputOption } from './text_input';
 

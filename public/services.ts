@@ -1,7 +1,7 @@
-import { createGetterSetter } from '../../../src/plugins/kibana_utils/public';
+import { createGetterSetter } from '../../../src/plugins/opensearch_dashboards_utils/public';
 import { NotificationsStart } from '../../../src/core/public';
 import { DataPublicPluginStart, FilterManager, IndexPatternsContract } from '../../../src/plugins/data/public';
-import { KibanaLegacyStart } from '../../../src/plugins/kibana_legacy/public';
+import { KibanaLegacyStart } from '../../../src/plugins/opensearch_dashboards_legacy/public';
 import { VisualizationsStart } from '../../../src/plugins/visualizations/public';
 
 export const [getFormatService, setFormatService] = createGetterSetter<

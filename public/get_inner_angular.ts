@@ -6,14 +6,14 @@ import angular from 'angular';
 import 'angular-sanitize';
 import 'angular-recursion';
 import { i18nDirective, i18nFilter, I18nProvider } from '@osd/i18n/angular';
-import { CoreStart, IUiSettingsClient, PluginInitializerContext } from 'kibana/public';
+import { CoreStart, IUiSettingsClient, PluginInitializerContext } from 'opensearch_dashboards/public';
 import {
   PaginateDirectiveProvider,
   PaginateControlsDirectiveProvider,
   PrivateProvider,
   watchMultiDecorator,
   OsdAccessibleClickProvider,
-} from '../../../src/plugins/kibana_legacy/public';
+} from '../../../src/plugins/opensearch_dashboards_legacy/public';
 
 const thirdPartyAngularDependencies = ['ngSanitize', 'ui.bootstrap', 'RecursionHelper'];
 
@@ -24,7 +24,7 @@ export function getAngularModule(name: string, core: CoreStart, context: PluginI
 
 let initialized = false;
 
-export function getInnerAngular(name = 'kibana/enhanced_table_vis', core: CoreStart) {
+export function getInnerAngular(name = 'opensearch_dashboards/enhanced_table_vis', core: CoreStart) {
   if (!initialized) {
     createLocalPrivateModule();
     createLocalI18nModule();

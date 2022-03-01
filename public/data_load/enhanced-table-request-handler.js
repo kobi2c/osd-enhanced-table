@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import { getSearchService } from '../services';
-import { handleCourierRequest } from './kibana_cloned_code/courier';
+import { handleCourierRequest } from './cloned/courier';
 
 export async function enhancedTableRequestHandler ({
   partialRows,

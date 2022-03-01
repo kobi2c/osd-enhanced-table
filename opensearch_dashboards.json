@@ -1,6 +1,6 @@
 {
-  "id": "enhancedTable",
-  "version": "kibana",
+  "id": "osdEnhancedTable",
+  "version": "1.0.0",
   "server": false,
   "ui": true,
   "requiredPlugins": [
@@ -8,9 +8,9 @@
     "expressions",
     "data",
     "inspector",
-    "kibanaLegacy",
-    "kibanaUtils",
-    "kibanaReact",
+    "opensearchDashboardsLegacy",
+    "opensearchDashboardsUtils",
+    "opensearchDashboardsReact",
     "share",
     "charts",
     "visDefaultEditor"
