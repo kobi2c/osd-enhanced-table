@@ -13,6 +13,29 @@ git clone https://github.com/opensearch-project/OpenSearch-Dashboards osd-enhanc
 cd osd-enhanced-table-dev
 git checkout 1.0.0
 ```
+### Update OpenSearch-Dashboards config
+
+Update `config/opensearch_dashboards.yml` with opensearch hosts and user credentials.
+opensearch.hosts: [""]
+opensearch.username: "" # Default username on the docker image
+opensearch.password: "" 
+
+- - -
+
+If you do not have opensearch server running yet, 
+you can use the `opensearchproject/opensearch` docker image
+
+```bash
+docker run -p 9200:9200 -p 9600:9600 -e "discovery.type=single-node" opensearchproject/opensearch:latest
+```
+and update config with the following settings:
+
+```yaml 
+opensearch.hosts: ["https://localhost:9200"]
+opensearch.username: "admin" # Default username on the docker image
+opensearch.password: "admin" # Default password on the docker image
+opensearch.ssl.verificationMode: none
+```
 ### Install Node.js and yarn
 install the version of Node.js listed in the .node-version file.
 ```bash
