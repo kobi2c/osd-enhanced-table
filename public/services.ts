@@ -1,15 +1,15 @@
 import { createGetterSetter } from '../../../src/plugins/opensearch_dashboards_utils/public';
 import { NotificationsStart } from '../../../src/core/public';
 import { DataPublicPluginStart, FilterManager, IndexPatternsContract } from '../../../src/plugins/data/public';
-import { KibanaLegacyStart } from '../../../src/plugins/opensearch_dashboards_legacy/public';
+import { OpenSearchDashboardsLegacyStart } from '../../../src/plugins/opensearch_dashboards_legacy/public';
 import { VisualizationsStart } from '../../../src/plugins/visualizations/public';
 
 export const [getFormatService, setFormatService] = createGetterSetter<
   DataPublicPluginStart['fieldFormats']
 >('table data.fieldFormats');
 
-export const [getKibanaLegacy, setKibanaLegacy] = createGetterSetter<KibanaLegacyStart>(
-  'table kibanaLegacy'
+export const [getOsdLegacyStart, setOsdLegacyStart] = createGetterSetter<OpenSearchDashboardsLegacyStart>(
+  'table osdLegacy'
 );
 
 export const [getNotifications, setNotifications] = createGetterSetter<

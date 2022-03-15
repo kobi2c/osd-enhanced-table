@@ -5,7 +5,7 @@ import { enhancedTableVisTypeDefinition } from './enhanced-table-vis';
 import { documentTableVisTypeDefinition } from './document-table-vis';
 
 import { DataPublicPluginStart } from '../../../src/plugins/data/public';
-import { setFilterManager, setFormatService, setIndexPatterns, setKibanaLegacy, setNotifications, setQueryService, setSearchService, setVisualization } from './services';
+import { setFilterManager, setFormatService, setIndexPatterns, setOsdLegacyStart, setNotifications, setQueryService, setSearchService, setVisualization } from './services';
 import { OpenSearchDashboardsLegacyStart } from '../../../src/plugins/opensearch_dashboards_legacy/public';
 import { Plugin as ExpressionsPublicPlugin } from '../../../src/plugins/expressions/public';
 
@@ -56,7 +56,7 @@ export class EnhancedTablePlugin implements Plugin<Promise<void>, void> {
 
   public start(core: CoreStart, deps: TablePluginStartDependencies) {
     setFormatService(deps.data.fieldFormats);
-    setKibanaLegacy(deps.osdLegacy);
+    setOsdLegacyStart(deps.osdLegacy);
     setNotifications(core.notifications);
     setQueryService(deps.data.query);
     setSearchService(deps.data.search);

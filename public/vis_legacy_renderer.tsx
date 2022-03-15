@@ -1,4 +1,4 @@
-import { CoreSetup, PluginInitializerContext } from 'kibana/public';
+import { CoreSetup, PluginInitializerContext } from '../../../src/core/public';
 import { ExpressionRenderDefinition } from '../../../src/plugins/expressions';
 import { CommonVisRenderValue } from './data_load/visualization_fn';
 import { TablePluginStartDependencies } from './plugin';

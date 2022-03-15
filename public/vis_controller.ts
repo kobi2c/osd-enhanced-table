@@ -4,11 +4,12 @@ import $ from 'jquery';
 import { CoreSetup, PluginInitializerContext } from '../../../src/core/public';
 import { VisParams } from '../../../src/plugins/visualizations/public';
 import { getAngularModule } from './get_inner_angular';
-import { getKibanaLegacy, getVisualization } from './services';
+import { getOsdLegacyStart, getVisualization } from './services';
 import { initTableVisLegacyModule } from './table_vis_legacy_module';
+import { initAngularBootstrap } from '../../../src/plugins/opensearch_dashboards_legacy/public';
 // @ts-ignore
 import enhancedTableVisTemplate from './enhanced-table-vis.html';
-import { BaseVisType } from '../../../src/plugins/visualizations/public/vis_types';
+import { VisType } from '../../../src/plugins/visualizations/public';
 import { IInterpreterRenderHandlers } from '../../../src/plugins/expressions';
 
 const innerAngularName = 'kibana/enhanced_table_vis';
@@ -26,7 +27,7 @@ export function getEnhancedTableVisualizationController(
     $compile: ICompileService | undefined;
     params: object;
     handlers: any;
-    vis: BaseVisType;
+    vis: VisType;
 
     constructor(domeElement: Element, visName: string) {
       this.el = $(domeElement);
@@ -47,10 +48,10 @@ export function getEnhancedTableVisualizationController(
     async initLocalAngular() {
       if (!this.tableVisModule) {
         const [coreStart] = await core.getStartServices();
-        await getKibanaLegacy().loadAngularBootstrap();
+        initAngularBootstrap();
         this.tableVisModule = getAngularModule(innerAngularName, coreStart, context);
         initTableVisLegacyModule(this.tableVisModule);
-        getKibanaLegacy().loadFontAwesome();
+        await getOsdLegacyStart().loadFontAwesome();
       }
     }
 
